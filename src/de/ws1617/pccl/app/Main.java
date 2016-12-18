@@ -27,8 +27,8 @@ public class Main {
 			Terminal[] input = Terminal.splitString(inputStr, "\\s+");
 			
 			Transformation tr = new Transformation(grammar, lexicon);
-			tr.rmUnitRules();
-			tr.rmUnreachables(startSymbol);
+			tr.removeUnitRules();
+			tr.removeUnreachableRules(startSymbol);
 			Grammar grTransformed = tr.getGrammar();
 			Lexicon lexTransformed = tr.getLexicon();
 			
